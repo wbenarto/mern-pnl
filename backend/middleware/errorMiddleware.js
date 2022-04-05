@@ -11,3 +11,5 @@ const errorHandler = (err, req, res, next) => {
 module.exports = {
     errorHandler
 }
+
+// Middleware are functions that run in the middle of request and response cycle. 
