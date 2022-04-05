@@ -13,13 +13,13 @@ const { protect } = require('../middleware/authMiddleware')
 router.get('/', protect, getGoals)
 
 // Create
-router.post('/', setGoal)
+router.post('/', protect, setGoal)
 
 // Update
-router.put('/:id', updateGoal)
+router.put('/:id', protect, updateGoal)
 
 
 // Delete
-router.delete('/:id', deleteGoal)
+router.delete('/:id', protect, deleteGoal)
 
 module.exports = router
